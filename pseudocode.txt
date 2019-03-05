@@ -1,0 +1,35 @@
+create a simple css grid to hold all buttons and text output
+
+create model to manage data
+	arithmetic operators object to hold operator and value (opperator: '*', value:'5');
+	array(formula) to hold each new object
+	string currValue
+	function create ArithObject
+	public vars
+		add value
+		getValue
+		add operator
+		remove object? maybe
+		clearFormula
+		calcAnswer
+		
+		
+		
+create view to manage output
+	DOMStrings object
+	public vars
+		displayAnswer
+		
+	
+create controller to manage input
+	DOMStrings
+	setupEventListeners
+
+	addInt
+	addOp
+	clearFormula
+	
+	
+	
+	
+	
