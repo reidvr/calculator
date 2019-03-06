@@ -1,1 +1,58 @@
-css
+* {
+    box-sizing: border-box;
+
+}
+div button{
+    background:rgb(54, 54, 54);
+
+    text-align: center;
+    color:white;
+}
+
+.output-container{
+    grid-area: output;
+    background:tan;
+    text-align: right;
+    padding:5px 10px;
+}
+.calc-container button p{
+    
+    margin:0px;
+}
+.output{
+    font-family: 'Montserrat';
+    font-size: 35px;
+    color:rgb(63, 63, 63);
+    
+}
+.addition-btn{
+    grid-area: addition;
+    
+    
+}
+
+button{
+    
+}
+
+
+
+
+.calc-container{
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(6, 50px);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    margin:auto;
+    width:80px;
+    margin: 200px auto;
+    grid-template-areas:
+    "output output output output"
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . addition"
+    ". . . addition";
+    
+}
