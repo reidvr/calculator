@@ -6,7 +6,13 @@ var model = (function(){
 
     var addValueToExpr = function(value){
         if(value)
-            data.expression[data.expression.length-1] = parseInt(value);
+            data.expression[data.expression.length-1] = parseFloat(value);
+
+    }
+
+    var isCurValDecimal = function(){
+        var check = data.currentValue.indexOf('.');
+        return (check > 0);
 
     }
 
@@ -23,6 +29,10 @@ var model = (function(){
         },
         //Add new number to current value
         addToValue: function(value){
+            if(value === '.')
+                if(isCurValDecimal())
+                    return;
+
             if(data.currentValue.length < 9)//max length of output
                 data.currentValue += value;
             
@@ -35,9 +45,9 @@ var model = (function(){
                 expression.forEach((el, i) => {
                     switch(el){
                         case 'x': result = result * expression[i+1];break;
-                        case '&#247':result = result / expression[i+1];break;
-                        case '-':result = result - expression[i+1];break;
-                        case '+':result = result + expression[i+1];break;
+                        case '÷': result = result / expression[i+1];break;
+                        case '-': result = result - expression[i+1];break;
+                        case '+': result = result + expression[i+1];break;
                     }
                 });
                 currentValue = result;
