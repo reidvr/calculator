@@ -2,6 +2,9 @@
     box-sizing: border-box;
 
 }
+body{
+    background:rgb(20, 20, 20);
+}
 div button{
     background:rgb(54, 54, 54);
 
@@ -31,9 +34,7 @@ div button{
     
 }
 
-button{
-    
-}
+button:focus {outline-color: rgb(15, 15, 15);}
 
 
 
